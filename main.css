@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+/* The font for the headlines is Lora and can be found on Google fonts. */
+/* The font list for the body copy is: Helvetica, Arial, sans-serif, and the color should be #333. */
+/* You can use #d0d0d0 for the light grey color of the lines. */
+/* Navigation links should behave thus: normal and visited: #666 and no underline , active: #DEB887, hover: #00ddff, use the same fonts as the headlines (Lora) */
+/* The exception would be the title of the site. It should be a link, but should not have a hover change and should remain the same color of the rest of the text (#333) */
+:root {
+    --header-font: "Lora", serif;
+    --body-font: Helvetica, Arial, sans-serif;
+
+    --black: #333;
+    --line-color: #d0d0d0;
+    --normal-visited: #666;
+    --active: #DEB887;
+    --hover: #00ddff;
+}
+
+body {
+    margin: 15px;
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    color: var(--hover);
+}
+a:active {
+    color: var(--active);
+}
+header h1 a {
+    color: var(--black);
+    font-family: var(--header-font);
+    font-size: 2.5em;
+}
+header h1 a:hover {
+    color: var(--black)
+}
+header h1 a:active {
+    color: var(--black)
+}
+header h1 {
+    text-align: center;
+    border-bottom: solid 1px var(--line-color);
+    padding: 40px 0;
+    margin: 0;
+}
+nav {
+    border-bottom: solid 1px var(--line-color);
+}
+ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+li {
+    padding: 10px 0;
+}
+ul a{
+    color: var(--normal-visited);
+    font-family: var(--header-font);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 1.75em;
+}
+.post-date {
+    border-bottom: solid 1px var(--line-color);
+    font-family: var(--header-font);
+    color: var(--black);
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 1.75em;
+    padding: 30px 0 15px 0;
+}
+.post-content {
+    display: flex;
+    flex-direction: column;
+}
+figure {
+    align-self: center;
+}
+.post-content h2 a {
+    color: var(--normal-visited);
+    font-family: var(--header-font);
+    font-size: 1.5em;
+}
+.post-content h2 a:hover {
+    color: var(--hover);
+}
+.post-content h2 a:active {
+    color: var(--active);
+}
+p {
+    font-family: var(--body-font);
+    font-size: 1.5em;
+}
+p > a {
+    font-family: var(--body-font);
+    color: var(--normal-visited);
+}
+
+@media screen and (min-width: 700px){
+    ul {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: flex-end;
+        margin: 10px 0;
+    }
+    ul a {
+        font-size: 1.25em;
+    }
+    article {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 20px;
+    }
+    .post-date {
+        margin: 0;
+        padding-top: 25px;
+        font-size: 1.5em;
+    }
+    h2 {
+        margin: 0;
+    }
+    .post-content {
+        border-bottom: solid 1px var(--line-color);
+        border-left: solid 1px var(--line-color);
+        padding: 20px;
+    }
+    .post-date {
+        border-bottom: none;
+    }
+    nav {
+        margin-bottom: 15px;
+    }
+    .post-content h2 a {
+        font-size: 1.25em;
+    }
+    p {
+        font-size: 1.25em;
+    }
+}
