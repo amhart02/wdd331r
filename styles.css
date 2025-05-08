@@ -1,0 +1,53 @@
+body {
+  background-color: darkred;
+  font-family: "Times New Roman";
+}
+
+h1 {
+  color: white;
+}
+
+#contactform {
+  background-color: rgb(213, 168, 127);
+}
+#contactform input, #contactform textarea {
+  background-color: rgb(240, 232, 225);
+  flex: 2;
+}
+
+fieldset > div {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+  padding: 10px;
+  gap: 10px;
+}
+
+#content {
+  width: 90%;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (max-width: 20em) {
+  fieldset > div {
+    display: flex;
+  }
+}
+@media (max-width: 20em) {
+  fieldset > div {
+    flex-direction: column;
+  }
+}
+@media (max-width: 20em) {
+  #name, #email, #subject {
+    width: 100%;
+  }
+}
+
+/*# sourceMappingURL=styles.css.map */
