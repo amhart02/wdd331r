@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
+
+$header-font: "Lora", serif;
+$body-font: Helvetica, Arial, sans-serif;
+$black: #333;
+$line-color: #d0d0d0;
+$normal-visited: #666;
+$active: #DEB887;
+$hover: #00ddff;
+$line: solid 1px $line-color;
+
+@mixin font-style($font, $size) {
+    font-family: $font;
+    font-size: $size;
+}
+
+body {
+    margin: 15px;
+}
+a {
+    text-decoration: none;
+    &:hover {
+        color: $hover;
+    }
+    &:active {
+        color: $active;
+    }
+}
+
+header h1 a {
+    @include font-style($header-font, 2.5em);
+    color: $black;
+    &:hover, &:active {
+        color: $black
+    }
+}
+
+header h1 {
+    text-align: center;
+    border-bottom: $line;
+    padding: 40px 0;
+    margin: 0;
+}
+nav {
+    border-bottom: $line;
+}
+ul {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+li {
+    padding: 10px 0;
+}
+ul a{
+    @include font-style($header-font, 1.75em);
+    color: $normal-visited;
+    text-transform: uppercase;
+    text-align: center;
+}
+.post-date {
+    @include font-style($header-font, 1.75em);
+    border-bottom: $line;
+    color: $black;
+    text-transform: uppercase;
+    text-align: right;
+    padding: 30px 0 15px 0;
+}
+.post-content {
+    display: flex;
+    flex-direction: column;
+}
+figure {
+    align-self: center;
+}
+.post-content h2 a {
+    @include font-style($header-font, 1.5em);
+    color: $normal-visited;
+    &:hover {
+        color: $hover;
+    }
+    &:active {
+        color: $active;
+    }
+}
+p {
+    @include font-style($body-font, 1.5em);
+}
+p > a {
+    @include font-style($body-font, 1em);
+    color: $normal-visited;
+}
+
+@media screen and (min-width: 700px){
+    ul {
+        flex-direction: row;
+        gap: 20px;
+        justify-content: flex-end;
+        margin: 10px 0;
+    }
+    ul a {
+        font-size: 1.25em;
+    }
+    article {
+        display: grid;
+        grid-template-columns: 1fr 4fr;
+        gap: 20px;
+    }
+    .post-date {
+        margin: 0;
+        padding-top: 25px;
+        font-size: 1.5em;
+    }
+    h2 {
+        margin: 0;
+    }
+    .post-content {
+        border-bottom: $line;
+        border-left: $line;
+        padding: 20px;
+    }
+    .post-date {
+        border-bottom: none;
+    }
+    nav {
+        margin-bottom: 15px;
+    }
+    .post-content h2 a {
+        font-size: 1.25em;
+    }
+    p {
+        font-size: 1.25em;
+    }
+}
