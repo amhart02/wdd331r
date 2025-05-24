@@ -1,0 +1,10 @@
+Animation 3-
+    Add two divs in the main circle div
+    Add css to make them both look like two halves of a circle
+    Add a keyframe for each half to move left or right respectively
+    Add an animation attribute to both half circles
+
+Animation 4- 
+    Add a circle in the center of the box
+    Add a keyframe where the circle scale is transformed from 1 to 1.2 twice
+    Add an animation attribute to the 4th circle CSS
