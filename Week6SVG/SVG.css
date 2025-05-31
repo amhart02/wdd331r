@@ -1,0 +1,59 @@
+svg {
+  margin: 50px;
+}
+
+.card1 path {
+  fill: #ff0000;
+  stroke: #ff0000;
+}
+
+.card1 rect:nth-of-type(n+3), .card1 circle {
+  fill: #ff0000;
+}
+
+.card1 line {
+  stroke-width: 4;
+  stroke: #ff0000;
+}
+
+.card2 g {
+  fill: #FFC40C;
+}
+
+.card2 line {
+  stroke: #FFC40C;
+  stroke-width: 5;
+}
+
+.card2:nth-child(2) {
+  stroke: #FFC40C;
+  stroke-width: 5;
+}
+
+img {
+  margin: 0 auto;
+  display: block;
+}
+
+p {
+  text-align: center;
+  font-family: "Times New Roman", Times, serif;
+  font-size: large;
+}
+
+div {
+  display: flex;
+  justify-content: center;
+}
+
+a {
+  color: #FFC40C;
+}
+
+@media screen and (max-width: 1000px) {
+  div {
+    flex-direction: column;
+  }
+}
+
+/*# sourceMappingURL=SVG.css.map */

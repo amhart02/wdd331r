@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Prove</title>
+    <link rel="stylesheet" href="SVG.css">
+</head>
+<body>
+<div>
+    <!-- first card -->
+    <svg class="card1" width="405" height="565">
+        <!-- card stroke -->
+        <rect x="2.5" y="2.5" width="400" height="560" rx="20" ry="20" stroke="black" stroke-width="5" fill="none" />
+        <!-- card background -->
+        <rect x="27.5" y="25" width="350" height="510" rx="20" ry="20" fill="pink" />
+        <!-- rect to clip -->
+        <defs>
+            <clipPath id="card-clip1">
+                <rect x="27.5" y="25" width="350" height="510" rx="20" ry="20" />
+            </clipPath>
+        </defs>
+
+        <!-- balloons  -->
+        <!-- top big balloon -->
+        <path transform="scale(0.6) translate(140, 150)"
+        d="M 200 260 
+            C 130 200, 100 90, 200 70 
+            C 300 90, 270 200, 200 260 z"/>
+        <!-- top medium left balloon -->
+        <path transform="scale(0.4) translate(140, 640) rotate(-55)"
+        d="M 200 260 
+            C 130 200, 100 90, 200 70 
+            C 300 90, 270 200, 200 260 z"/>
+        <!-- top medium right balloon -->
+        <path transform="scale(0.4) translate(650, 310) rotate(55)"
+        d="M 200 260 
+            C 130 200, 100 90, 200 70 
+            C 300 90, 270 200, 200 260 z"/>
+        <!-- bottom big balloon -->
+        <path transform="scale(1, -1) scale(0.60) translate(140, -720)"
+        d="M 200 260 
+            C 130 200, 100 90, 200 70 
+            C 300 90, 270 200, 200 260 z"/>
+        <!-- bottom medium left balloon -->
+        <path transform="scale(1, -1) scale(0.4) translate(140, -665) rotate(-55)"
+        d="M 200 260 
+            C 130 200, 100 90, 200 70 
+            C 300 90, 270 200, 200 260 z"/>
+        <!-- bottom medium right balloon -->
+        <path transform="scale(1, -1) scale(0.4) translate(650, -990) rotate(55)"
+        d="M 200 260 
+            C 130 200, 100 90, 200 70 
+            C 300 90, 270 200, 200 260 z"/>
+
+        <!-- top left squares -->
+        <rect x="40" y="40" width="25" height="25"/>
+        <rect x="70" y="40" width="25" height="25"/>
+        <rect x="40" y="70" width="25" height="25"/>
+        <rect x="70" y="70" width="25" height="25"/>
+        <!-- top right squares -->
+        <rect x="310" y="40" width="25" height="25"/>
+        <rect x="340" y="40" width="25" height="25"/>
+        <rect x="310" y="70" width="25" height="25"/>
+        <rect x="340" y="70" width="25" height="25"/>
+        <!-- bottom left squares -->
+        <rect x="40" y="465" width="25" height="25"/>
+        <rect x="70" y="465" width="25" height="25"/>
+        <rect x="40" y="495" width="25" height="25"/>
+        <rect x="70" y="495" width="25" height="25"/>
+        <!-- bottom right square -->
+        <rect x="310" y="465" width="25" height="25"/>
+        <rect x="340" y="465" width="25" height="25"/>
+        <rect x="310" y="495" width="25" height="25"/>
+        <rect x="340" y="495" width="25" height="25"/>
+
+        <!-- lines -->
+        <!-- top to right -->
+        <g clip-path="url(#card-clip)">
+            <line x1="202.5" y1="25" x2="378" y2="255"/>
+        </g>
+        <!-- right to bottom -->
+        <g clip-path="url(#card-clip)">
+            <line x1="202.5" y1="535" x2="378" y2="255"/>
+        </g>
+        <!-- bottom to left -->
+        <g clip-path="url(#card-clip)">
+            <line x1="202.5" y1="535" x2="27.5" y2="255"/>
+        </g>
+        <!-- bottom to left -->
+        <g clip-path="url(#card-clip)">
+            <line x1="202.5" y1="25" x2="27.5" y2="255"/>
+        </g>
+
+        <!-- circles -->
+        <!-- left -->
+        <g clip-path="url(#card-clip)">
+            <circle cx="27.5" cy="255" r="30" />
+        </g>
+        <!-- top -->
+        <g clip-path="url(#card-clip)">
+            <circle cx="202.5" cy="27.5" r="30" />
+        </g>
+        <!-- right -->
+        <g clip-path="url(#card-clip)">
+            <circle cx="378" cy="255" r="30" />
+        </g>
+        <!-- bottom -->
+        <g clip-path="url(#card-clip)">
+            <circle cx="202.5" cy="535" r="30" />
+        </g>
+    </svg>
+<!-- --------------------------------------------------------------------------- -->
+    <!-- second card -->
+    <svg class="card2" width="405" height="565">
+        <!-- card stroke -->
+        <rect x="2.5" y="2.5" width="400" height="560" rx="20" ry="20" stroke="none" fill="black"/>
+        <!-- card background -->
+        <rect x="27.5" y="25" width="350" height="510" rx="20" ry="20" />
+        <!-- rect to clip -->
+        <defs>
+            <clipPath id="card-clip">
+                <rect x="27.5" y="25" width="350" height="510" rx="20" ry="20" />
+            </clipPath>
+        </defs>
+
+        <!-- background lines -->
+        <!-- top to left -->
+        <line x1="67.5" y1="25" x2="27.5" y2="90"/>
+        <line x1="157.5" y1="25" x2="27.5" y2="220" />
+        <line x1="247.5" y1="25" x2="27.5" y2="345" />
+        <line x1="337.5" y1="25" x2="27.5" y2="470" />
+        <!-- left to bottom -->
+        <line x1="378" y1="90" x2="67.5" y2="535"/>
+        <line x1="378" y1="220" x2="157.5" y2="535" />
+        <line x1="378" y1="345" x2="247.5" y2="535" />
+        <line x1="378" y1="470" x2="337.5" y2="535" />
+        <!-- top to right -->
+        <line x1="337.5" y1="25" x2="378" y2="90" />
+        <line x1="247.5" y1="25" x2="378" y2="220" />
+        <line x1="157.5" y1="25" x2="378" y2="345" />
+        <line x1="67.5" y1="25"  x2="378" y2="470" />
+        <!-- left to bottom -->
+        <line x1="27.5" y1="90" x2="337.5" y2="535"/>
+        <line x1="27.5" y1="220" x2="247.5" y2="535"/>
+        <line x1="27.5" y1="345" x2="157.5" y2="535"/>
+        <line x1="27.5" y1="470"  x2="67.5" y2="535"/>
+
+        <!-- clubs -->
+        <!-- 1st row club -->
+        <g clip-path="url(#card-clip)">
+            <g class="club" transform="scale(1, -1) scale(0.5) translate(555, -90)"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                <circle cx="18" cy="35" r="14" />
+                <circle cx="30" cy="15" r="14" />
+                <circle cx="42" cy="35" r="14" />
+                <path d="M30,30 Q 30,50 20,60 H40 Q30,50 30,30" />
+            </g>
+        </g>
+        <!-- 2nd row club -->
+        <g class="club" transform="scale(1, -1) scale(0.5) translate(640, -210)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <circle cx="18" cy="35" r="14" />
+            <circle cx="30" cy="15" r="14" />
+            <circle cx="42" cy="35" r="14" />
+            <path d="M30,30 Q 30,50 20,60 H40 Q30,50 30,30" />
+        </g>
+        <!-- 3rd row club middle -->
+        <g class="club" transform="scale(1, -1) scale(0.5) translate(375, -340)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <circle cx="18" cy="35" r="14" />
+            <circle cx="30" cy="15" r="14" />
+            <circle cx="42" cy="35" r="14" />
+            <path d="M30,30 Q 30,50 20,60 H40 Q30,50 30,30" />
+        </g>
+        <!-- 3rd row club left -->
+        <g clip-path="url(#card-clip)">
+            <g class="club" transform="scale(1, -1) scale(0.5) translate(25, -340)"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                <circle cx="18" cy="35" r="14" />
+                <circle cx="30" cy="15" r="14" />
+                <circle cx="42" cy="35" r="14" />
+                <path d="M30,30 Q 30,50 20,60 H40 Q30,50 30,30" />
+            </g>
+        </g>
+        <!-- 3rd row club right -->
+        <g clip-path="url(#card-clip)">
+            <g class="club" transform="scale(1, -1) scale(0.5) translate(725, -340)"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                <circle cx="18" cy="35" r="14" />
+                <circle cx="30" cy="15" r="14" />
+                <circle cx="42" cy="35" r="14" />
+                <path d="M30,30 Q 30,50 20,60 H40 Q30,50 30,30" />
+            </g>
+        </g>
+        <!-- 7th row club middle-->
+        <g class="club" transform="scale(0.5) translate(375, 775)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <circle cx="18" cy="35" r="14" />
+            <circle cx="30" cy="15" r="14" />
+            <circle cx="42" cy="35" r="14" />
+            <path d="M30,30 Q 30,50 20,60 H40 Q30,50 30,30" />
+        </g>
+        <!-- 7th row club left-->
+        <g clip-path="url(#card-clip)">
+            <g class="club" transform="scale(0.5) translate(25, 780)"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                <circle cx="18" cy="35" r="14" />
+                <circle cx="30" cy="15" r="14" />
+                <circle cx="42" cy="35" r="14" />
+                <path d="M30,30 Q 30,50 20,60 H40 Q30,50 30,30" />
+            </g>
+        </g>
+        <!-- 7th row club right-->
+        <g clip-path="url(#card-clip)">
+            <g class="club" transform="scale(0.5) translate(725, 780)"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                <circle cx="18" cy="35" r="14" />
+                <circle cx="30" cy="15" r="14" />
+                <circle cx="42" cy="35" r="14" />
+                <path d="M30,30 Q 30,50 20,60 H40 Q30,50 30,30" />
+            </g>
+        </g>
+        <!-- 8th row club -->
+        <g class="club" transform="scale(0.5) translate(640, 905)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <circle cx="18" cy="35" r="14" />
+            <circle cx="30" cy="15" r="14" />
+            <circle cx="42" cy="35" r="14" />
+            <path d="M30,30 Q 30,50 20,60 H40 Q30,50 30,30" />
+        </g>
+        <!-- 9th row club -->
+        <g clip-path="url(#card-clip)">
+            <g class="club" transform="scale(0.5) translate(555, 1030)"  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                <circle cx="18" cy="35" r="14" />
+                <circle cx="30" cy="15" r="14" />
+                <circle cx="42" cy="35" r="14" />
+                <path d="M30,30 Q 30,50 20,60 H40 Q30,50 30,30" />
+            </g>
+        </g>
+        
+        <!-- spades -->
+        <!-- 1st row -->
+        <g clip-path="url(#card-clip)">
+            <g class="spade" transform="scale(1, -1) scale(0.5) translate(375, -90)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                <g transform="rotate(225,30,30)">
+                    <rect width="30" height="30" x="20" y="20" />
+                    <circle cx="20" cy="35" r="15" />
+                    <circle cx="35" cy="20" r="15" />
+                </g>
+                <path d="M30,30 Q30,50 20,60 H40 Q30,50 30,30" />
+            </g>
+        </g>
+        <!-- 2nd row spade-->
+        <g class="spade" transform="scale(1, -1) scale(0.5) translate(107.5, -220)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <g transform="rotate(225,30,30)">
+                <rect width="30" height="30" x="20" y="20" />
+                <circle cx="20" cy="35" r="15" />
+                <circle cx="35" cy="20" r="15" />
+            </g>
+            <path d="M30,30 Q30,50 20,60 H40 Q30,50 30,30" />
+        </g>
+        <!-- 3rd row spade-->
+        <g class="spade" transform="scale(1, -1) scale(0.5) translate(555, -340)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <g transform="rotate(225,30,30)">
+                <rect width="30" height="30" x="20" y="20" />
+                <circle cx="20" cy="35" r="15" />
+                <circle cx="35" cy="20" r="15" />
+            </g>
+            <path d="M30,30 Q30,50 20,60 H40 Q30,50 30,30" />
+        </g>
+        <!-- 4th row spade -->
+        <g class="spade" transform="scale(1, -1) scale(0.5) translate(287.5, -470)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <g transform="rotate(225,30,30)">
+                <rect width="30" height="30" x="20" y="20" />
+                <circle cx="20" cy="35" r="15" />
+                <circle cx="35" cy="20" r="15" />
+            </g>
+            <path d="M30,30 Q30,50 20,60 H40 Q30,50 30,30" />
+        </g>
+        <!-- 6th row spade -->
+        <g class="spade" transform="scale(0.5) translate(287.5, 650)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <g transform="rotate(225,30,30)">
+                <rect width="30" height="30" x="20" y="20" />
+                <circle cx="20" cy="35" r="15" />
+                <circle cx="35" cy="20" r="15" />
+            </g>
+            <path d="M30,30 Q30,50 20,60 H40 Q30,50 30,30" />
+        </g>
+        <!-- 7th row spade -->
+        <g class="spade" transform="scale(0.5) translate(555, 780)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <g transform="rotate(225,30,30)">
+                <rect width="30" height="30" x="20" y="20" />
+                <circle cx="20" cy="35" r="15" />
+                <circle cx="35" cy="20" r="15" />
+            </g>
+            <path d="M30,30 Q30,50 20,60 H40 Q30,50 30,30" />
+        </g>
+        <!-- 8th row spade -->
+        <g class="spade" transform="scale(0.5) translate(107.5, 905)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <g transform="rotate(225,30,30)">
+                <rect width="30" height="30" x="20" y="20" />
+                <circle cx="20" cy="35" r="15" />
+                <circle cx="35" cy="20" r="15" />
+            </g>
+            <path d="M30,30 Q30,50 20,60 H40 Q30,50 30,30" />
+        </g>
+        <!-- 9th row spade -->
+        <g clip-path="url(#card-clip)">
+            <g class="spade" transform="scale(0.5) translate(375, 1030)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                <g transform="rotate(225,30,30)">
+                    <rect width="30" height="30" x="20" y="20" />
+                    <circle cx="20" cy="35" r="15" />
+                    <circle cx="35" cy="20" r="15" />
+                </g>
+                <path d="M30,30 Q30,50 20,60 H40 Q30,50 30,30" />
+            </g>
+        </g>
+
+        <!-- hearts -->
+        <!-- 1st row heart -->
+        <g clip-path="url(#card-clip)">
+            <g transform="scale(1, -1) scale(0.05) translate(1980, -900)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+                <g transform="rotate(45,300,300)">
+                <rect x="150" y="150" height="350" width="350" />
+                <circle cx="150" cy="325" r="175" />
+                <circle cx="325" cy="150" r="175" />
+                </g>
+            </g>
+        </g>
+        <!-- 2nd row heart -->
+        <g transform="scale(1, -1) scale(0.05) translate(2880, -2100)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <g transform="rotate(45,300,300)">
+            <rect x="150" y="150" height="350" width="350" />
+            <circle cx="150" cy="325" r="175" />
+            <circle cx="325" cy="150" r="175" />
+            </g>
+        </g>
+        <!-- 3rd row heart -->
+        <g transform="scale(1, -1) scale(0.05) translate(1980, -3400)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <g transform="rotate(45,300,300)">
+            <rect x="150" y="150" height="350" width="350" />
+            <circle cx="150" cy="325" r="175" />
+            <circle cx="325" cy="150" r="175" />
+            </g>
+        </g>
+        <!-- 4th row heart -->
+        <g transform="scale(1, -1) scale(0.05) translate(4650, -4700)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <g transform="rotate(45,300,300)">
+            <rect x="150" y="150" height="350" width="350" />
+            <circle cx="150" cy="325" r="175" />
+            <circle cx="325" cy="150" r="175" />
+            </g>
+        </g>
+        <!-- 6th row heart -->
+        <g transform="scale(0.05) translate(4650, 6600)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <g transform="rotate(45,300,300)">
+            <rect x="150" y="150" height="350" width="350" />
+            <circle cx="150" cy="325" r="175" />
+            <circle cx="325" cy="150" r="175" />
+            </g>
+        </g>
+        <!-- 7th row heart -->
+        <g transform="scale(0.05) translate(1980, 7850)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <g transform="rotate(45,300,300)">
+            <rect x="150" y="150" height="350" width="350" />
+            <circle cx="150" cy="325" r="175" />
+            <circle cx="325" cy="150" r="175" />
+            </g>
+        </g>
+        <!-- 8th row heart -->
+        <g transform="scale(0.05) translate(2880, 9150)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+            <g transform="rotate(45,300,300)">
+            <rect x="150" y="150" height="350" width="350" />
+            <circle cx="150" cy="325" r="175" />
+            <circle cx="325" cy="150" r="175" />
+            </g>
+        </g>
+        <!-- 9th row heart -->
+        <g clip-path="url(#card-clip)">
+            <g transform="scale(0.05) translate(1980, 10300)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600">
+                <g transform="rotate(45,300,300)">
+                <rect x="150" y="150" height="350" width="350" />
+                <circle cx="150" cy="325" r="175" />
+                <circle cx="325" cy="150" r="175" />
+                </g>
+            </g>
+        </g>
+        
+        <!-- diamonds -->
+        <!-- 2nd row diamond -->
+        <g transform="scale(0.5) translate(465, 150)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <rect x="10" y="10" width="40" height="40" transform="rotate(45,30,30)" />
+        </g>
+        <!-- 4th row diamond left-->
+        <g transform="scale(0.5) translate(110, 410)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <rect x="10" y="10" width="40" height="40" transform="rotate(45,30,30)" />
+        </g>
+        <!-- 4th row diamond right-->
+        <g transform="scale(0.5) translate(640, 410)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <rect x="10" y="10" width="40" height="40" transform="rotate(45,30,30)" />
+        </g>
+        <!-- 5th row diamond left-->
+        <g clip-path="url(#card-clip)">
+            <g transform="scale(0.5) translate(25, 530)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                <rect x="10" y="10" width="40" height="40" transform="rotate(45,30,30)" />
+            </g>
+        </g>
+        <!-- 5th row diamond left middle-->
+        <g transform="scale(0.5) translate(200, 530)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <rect x="10" y="10" width="40" height="40" transform="rotate(45,30,30)" />
+        </g>
+        <!-- 5th row diamond middle-->
+        <g transform="scale(0.5) translate(375, 530)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <rect x="10" y="10" width="40" height="40" transform="rotate(45,30,30)" />
+        </g>
+        <!-- 5th row diamond right middle-->
+        <g transform="scale(0.5) translate(550, 530)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <rect x="10" y="10" width="40" height="40" transform="rotate(45,30,30)" />
+        </g>
+        <!-- 5th row diamond right-->
+        <g clip-path="url(#card-clip)">
+            <g transform="scale(0.5) translate(725, 530)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+                <rect x="10" y="10" width="40" height="40" transform="rotate(45,30,30)" />
+            </g>
+        </g>
+        <!-- 6th row diamond left -->
+        <g transform="scale(0.5) translate(110, 660)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <rect x="10" y="10" width="40" height="40" transform="rotate(45,30,30)" />
+        </g>
+        640
+        <!-- 6th row diamond left -->
+        <g transform="scale(0.5) translate(640, 660)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <rect x="10" y="10" width="40" height="40" transform="rotate(45,30,30)" />
+        </g>
+        <!-- 9th row diamond -->
+        <g transform="scale(0.5) translate(465, 920)" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+            <rect x="10" y="10" width="40" height="40" transform="rotate(45,30,30)" />
+        </g>
+</svg>
+</div>
+
+<img src="playingcard.jpg" alt="Playing card example">
+<p>Playing card example from <a href="https://www.pinterest.com/pin/501940320942382241/">https://www.pinterest.com/pin/501940320942382241/</a></p>
+<p>Suit SVGs from <a href="https://sean.brunnock.com/SVG/suits.html">https://sean.brunnock.com/SVG/suits.html</a></p>
+
+</body>
+</html>
+
