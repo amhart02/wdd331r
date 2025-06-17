@@ -1,0 +1,47 @@
+.row-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    img{
+        height: 150px;
+        width: 100%;
+        object-fit: cover;
+    }
+    div {
+        height: 150px;
+    }
+}
+.col-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    flex-direction: column;
+    height: 2500px;
+    width: auto;
+    img {
+        height: 100%;
+        width: 200px;
+        object-fit: cover;
+    }
+    div {
+        width: 200px;
+    }
+}
+div {
+    border: solid 2px black;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    overflow: hidden;
+    text-align: center;
+}
+h2 {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin: 10px;
+    font-weight: normal;
+}
+h1 {
+    text-align: center;
+    font-size: 50px;
+}
