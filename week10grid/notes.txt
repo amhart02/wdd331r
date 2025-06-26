@@ -1,0 +1,3 @@
+1fr = 1 free space 
+grid-auto-flow: column;
+inline style variables
